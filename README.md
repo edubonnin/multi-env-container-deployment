@@ -110,7 +110,6 @@ Comandos adicionales:
 
     ```bash
     make dev-db-test
-    make prod-psql -c "\l"
     ```
 
 - **Redis (prod):** healthcheck en compose (`redis-cli ping`). Comprobación manual:
@@ -145,11 +144,6 @@ Si algún servicio falla, el código HTTP pasa a 503 y el detalle se refleja en 
 
 - `db/init.sql` crea `health_logs`, `cars` e inserta ejemplos.
 - Se ejecuta automáticamente en **producción** la primera vez que se levanta Postgres.
-- Ejecución manual en desarrollo:
-
-    ```bash
-    make dev-psql < db/init.sql
-    ```
 
 - Para limpiar el estado:
 
